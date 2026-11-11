@@ -28,7 +28,7 @@ h1 { margin: 0; font-size: 2rem; }
 }
 .error { color: var(--danger); }
 
-.table-wrap { overflow-x: auto; margin-top: 1.5rem; background: var(--card); border-radius: 12px; }
+.table-wrap { position: relative; overflow-x: auto; margin-top: 1.5rem; background: var(--card); border-radius: 12px; }
 .habits { width: 100%; border-collapse: collapse; }
 .habits th, .habits td { padding: 0.6rem; text-align: center; border-bottom: 1px solid #334155; }
 .habits th[scope="row"] { text-align: left; font-weight: 500; white-space: nowrap; }
