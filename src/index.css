@@ -1,0 +1,52 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #22c55e;
+  --danger: #f87171;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+
+.app { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+h1 { margin: 0; font-size: 2rem; }
+.subtitle { color: var(--muted); margin: 0.25rem 0 1.5rem; }
+
+.add-form { display: flex; gap: 0.5rem; }
+.add-form input {
+  flex: 1; padding: 0.7rem 0.9rem; border-radius: 8px;
+  border: 1px solid #334155; background: var(--card); color: var(--text); font-size: 1rem;
+}
+.add-form button {
+  padding: 0.7rem 1.1rem; border: 0; border-radius: 8px;
+  background: var(--accent); color: #052e16; font-weight: 600; cursor: pointer;
+}
+.error { color: var(--danger); }
+
+.table-wrap { overflow-x: auto; margin-top: 1.5rem; background: var(--card); border-radius: 12px; }
+.habits { width: 100%; border-collapse: collapse; }
+.habits th, .habits td { padding: 0.6rem; text-align: center; border-bottom: 1px solid #334155; }
+.habits th[scope="row"] { text-align: left; font-weight: 500; white-space: nowrap; }
+.habits thead th { color: var(--muted); font-weight: 500; font-size: 0.85rem; }
+.habits thead th.today { color: var(--accent); }
+.stat { white-space: nowrap; color: var(--muted); }
+
+.day {
+  width: 2rem; height: 2rem; border-radius: 6px; border: 2px solid #475569;
+  background: transparent; color: #052e16; font-weight: 700; cursor: pointer;
+}
+.day.done { background: var(--accent); border-color: var(--accent); }
+.day:focus-visible, button:focus-visible { outline: 2px solid #60a5fa; outline-offset: 2px; }
+.delete { background: none; border: 0; color: var(--muted); cursor: pointer; font-size: 1rem; }
+.delete:hover { color: var(--danger); }
+
+footer { margin-top: 2rem; color: var(--muted); font-size: 0.85rem; text-align: center; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
